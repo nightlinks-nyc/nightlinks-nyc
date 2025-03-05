@@ -1,4 +1,4 @@
-let abs = 'nightlinks-nyc.com/';
+let abs = 'https://nightlinks-nyc.com/';
 
 function makeSideNav(tab) {  
 	let sideNavCode =                                                                                               '\n' +
