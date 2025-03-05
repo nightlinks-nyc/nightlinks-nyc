@@ -1,4 +1,4 @@
-let absGallery = 'nightlinks-nyc.com/';
+let absGallery = 'https://nightlinks-nyc.com/';
 
 // GALLERIES
 const photos_wanted = ["photos_wanted.jpg", "nightlinks-nyc.com/about.html#contact",
