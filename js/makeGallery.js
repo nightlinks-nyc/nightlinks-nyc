@@ -1,9 +1,9 @@
 let absGallery = 'https://nightlinks-nyc.com/';
 
 // GALLERIES
-const photos_wanted = ["photos_wanted.jpg", "nightlinks-nyc.com/about.html#contact",
-                       "photos_wanted.jpg", "nightlinks-nyc.com/about.html#contact",
-                       "photos_wanted.jpg", "nightlinks-nyc.com/about.html#contact"]
+const photos_wanted = ["photos_wanted.jpg", "https://nightlinks-nyc.com/about.html#contact",
+                       "photos_wanted.jpg", "https://nightlinks-nyc.com/about.html#contact",
+                       "photos_wanted.jpg", "https://nightlinks-nyc.com/about.html#contact"]
 const homeCategories = ["home/cosmetology.JPG",       "cosmetology.html",
                         "home/events-and-venues.JPG", "events-and-venues.html",
                         "home/merchants.JPG",         "merchants.html",
