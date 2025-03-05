@@ -1,5 +1,5 @@
 function makeFooter() {
-	let absFoot = 'https://katcottrell.github.io/vampire-interviews/images/icons/';
+	let absFoot = 'https://nightlinks-nyc.com/images/icons/';
 	let linkAttributes = 'target="_blank" rel="noopener noreferrer" style="color:transparent;"';
   
 	let footerCode =                                                                                      '\n' +
@@ -10,11 +10,11 @@ function makeFooter() {
 	    '<img src="' + absFoot + 'ig_icon.png" class="footer-icon" alt="Instagram">'                    + '\n' +
 	    '</a>'                                                                                          + '\n' +
 	    
-	    '<a href="https://github.com/katcottrell/" ' + linkAttributes + '>'                             + '\n' +
+	    '<a href="https://www.facebook.com/profile.php?id=61573576092944" ' + linkAttributes + '>'      + '\n' +
 	    '<img src="' + absFoot + 'fb_icon.png" class="footer-icon" alt="Facebook">'                     + '\n' +
 	    '</a>'                                                                                          + '\n' +
 	    
-	    '<a href="mailto:fledermischief@gmail.com" ' + linkAttributes + '>'                             + '\n' + 
+	    '<a href="https://discord.gg/stN5EkvA" ' + linkAttributes + '>'                                 + '\n' + 
 	    '<img src="' + absFoot + 'discord_icon.png" class="footer-icon" alt="Discord">'                 + '\n' +
 	    '</a>'                                                                                          + '\n' +
 	    

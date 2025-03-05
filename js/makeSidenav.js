@@ -1,9 +1,9 @@
-let abs = 'https://katcottrell.github.io/vampire-interviews/';
+let abs = 'https://nightlinks-nyc.com/';
 
 function makeSideNav(tab) {  
 	let sideNavCode =                                                                                               '\n' +
                     '<div class="sidenav">'                                                                           + '\n' +
-                    '<a class="sideHeading" href="' + abs + 'nightlinks.html">Home</a>'                               + '\n' +
+                    '<a class="sideHeading" href="' + abs + 'index.html">Home</a>'                                    + '\n' +
                     '<hr class="thickHr">'                                                                            + '\n' +
                     '<a class="sideHeading" href="' + abs + 'about.html">About</a>'                                   + '\n' +
                     '<hr class="thickHr">'                                                                            + '\n' +
