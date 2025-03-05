@@ -1,5 +1,5 @@
 function makeFooter() {
-	let absFoot = 'nightlinks-nyc.com/images/icons/';
+	let absFoot = 'https://nightlinks-nyc.com/images/icons/';
 	let linkAttributes = 'target="_blank" rel="noopener noreferrer" style="color:transparent;"';
   
 	let footerCode =                                                                                      '\n' +
