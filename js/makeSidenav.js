@@ -1,4 +1,4 @@
-let abs = 'https://katcottrell.github.io/vampire-interviews/';
+let abs = 'nightlinks-nyc.com/';
 
 function makeSideNav(tab) {  
 	let sideNavCode =                                                                                               '\n' +
