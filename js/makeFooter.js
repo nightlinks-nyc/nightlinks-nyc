@@ -14,7 +14,7 @@ function makeFooter() {
 	    '<img src="' + absFoot + 'fb_icon.png" class="footer-icon" alt="Facebook">'                     + '\n' +
 	    '</a>'                                                                                          + '\n' +
 	    
-	    '<a href="https://discord.gg/stN5EkvA" ' + linkAttributes + '>'                                 + '\n' + 
+	    '<a href="https://discord.gg/Vbd3gjAb" ' + linkAttributes + '>'                                 + '\n' + 
 	    '<img src="' + absFoot + 'discord_icon.png" class="footer-icon" alt="Discord">'                 + '\n' +
 	    '</a>'                                                                                          + '\n' +
 	    
