@@ -11,7 +11,6 @@
 	--myDarkGray:      #555555;
 	--myOffBlack:      #222222;
 	--myHighlightGray: #E0E0E0;
-	--myLinkGreen:     #00FF84;
 	--myBloodRed:      #c90000;
 	--sideNavWidth:    220px;
 }
@@ -46,7 +45,7 @@ hr {
 	width: calc(49% - 38px);
 	float: left;
 	border-radius: 10px;
-	border: solid black 3px;
+	border: solid #ccc 3px;
 	margin-bottom: 20px;
 	padding: 30px 16px;
 	box-shadow: 1px 1px 12px black;
@@ -180,7 +179,7 @@ a {
 	text-decoration: none;
 	font-size: 20px;
 	border-radius: 8px;
-	border: solid black 3px;
+	border: solid #ccc 3px;
 	text-align: center;
 	margin: auto;
 	width: calc(min(70%, 250px));
