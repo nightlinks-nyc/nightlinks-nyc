@@ -8,10 +8,10 @@ function makeListing(imgLoc, name, desc, socials) {
 		'<p class="listingName">' + name + '</p>' +
 		'<p class="listingDesc">' + desc + '</p>'; 	
 	
-	for (social in socials) {
+	for (social of socials) {
 		listingHTML += '<p class="social">';
-		listingHTML += '<img class="socialIcon" src="https://www.w3schools.com/html/img_girl.jpg">';
-		listingHTML += '<a class="socialLink" href="' + 'https://www.w3schools.com/' + '">' + 'social.friendly' + '</a>';		
+		listingHTML += '<img class="socialIcon" src="/images/icons/' + social.icon + '">';
+		listingHTML += '<a class="socialLink" href="' + social.url + '">' + social.friendly + '</a>';		
 		listingHTML += '</p>';
 	}
 	
@@ -26,7 +26,7 @@ EXAMPLE INFO
 const fled_imgLoc = 'https://katcottrell.github.io/vampire-interviews/images/icons/ig_icon.png';
 const fled_name = 'Fledermischief';
 const fled_desc = 'Sample description.';
-const fled_ig0 = {platform:"ig", url:"google.com", friendly:"@google"};
+const fled_ig0 = {icon:"ig_icon.png", url:"google.com", friendly:"@google"};
 const fled_socials = [fled_ig0];
 makeListing(fled_imgLoc, fled_name, fled_desc, fled_socials);
 */
