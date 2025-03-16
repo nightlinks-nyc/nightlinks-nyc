@@ -493,3 +493,9 @@ th {
 }
 
 .socialLink {}
+
+.listingHr {
+	width: 90%;
+	margin: 10px 5%;
+	border-top: 1px solid #666;
+}
