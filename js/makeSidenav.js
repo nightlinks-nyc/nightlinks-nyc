@@ -31,7 +31,7 @@ function makeSideNav(tab) {
                     '<hr class="skinnyHr">'                                                                           + '\n' +
                     '<a class="sideTabs" href="' + abs + 'categories/stem.html">STEM</a>'                             + '\n' +
                     '<hr class="skinnyHr">'                                                                           + '\n' +
-                    '<a class="sideTabs" href="' + abs + 'categories/tattoos.html">Tattoos & Body Mods</a>'           + '\n' +
+                    '<a class="sideTabs" href="' + abs + 'categories/tattoos.html">Tattoos & Mods</a>'                + '\n' +
                     '<hr class="skinnyHr">'                                                                           + '\n' +
                     '<a class="sideTabs" href="' + abs + 'categories/visual-arts.html">Visual Arts</a>'               + '\n' +
                     '<hr class="skinnyHr">'                                                                           + '\n' +
