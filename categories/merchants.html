@@ -12,24 +12,84 @@
 				<p class="subheading">
 					Sellers of goods and wares by e-commerce, brick-and-mortar, popups, and everything in between.
 				</p>
+				<p>
+					Listings wanted!  
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLScq-V6I9PgNDXIREt2lnhRTPQwK71LIY1XX82UnHBr-qxcyJQ/viewform?usp=header">Submit yours here.</a>
+				</p>
 				<script type="text/javascript" src="https://nightlinks-nyc.com/js/makeWarning.js"></script>
-				<table>
-					<tbody style="border: solid gray 1px;">
-						<tr class="singleColTd" style="border-top: 4px solid #ddd;">
-							<td>Listings wanted!  <a href="https://docs.google.com/forms/d/e/1FAIpQLScq-V6I9PgNDXIREt2lnhRTPQwK71LIY1XX82UnHBr-qxcyJQ/viewform?usp=header">Submit yours here.</a></td>
-						</tr>
-						<tr class="singleColTd">
-							<td>Listings wanted!  <a href="https://docs.google.com/forms/d/e/1FAIpQLScq-V6I9PgNDXIREt2lnhRTPQwK71LIY1XX82UnHBr-qxcyJQ/viewform?usp=header">Submit yours here.</a></td>
-						</tr>
-						<tr class="singleColTd" style="border-bottom: 4px solid #ddd;">
-							<td>Listings wanted!  <a href="https://docs.google.com/forms/d/e/1FAIpQLScq-V6I9PgNDXIREt2lnhRTPQwK71LIY1XX82UnHBr-qxcyJQ/viewform?usp=header">Submit yours here.</a></td>
-						</tr>
-					</tbody>
-				</table>
+				<script type="text/javascript" src="https://nightlinks-nyc.com/js/makeListing.js"></script>
+				
+				<!-- SAMPLE FOR COPY/PASTING:
+				<script>
+					const _imgLoc = 'FULL_IMG_PATH';
+					const _name = 'NAME';
+					const _desc = "DESCRIPTION";
+					const _person = {icon:"person_icon.png", url:"PERSON_LINK", friendly:"NAME"};
+					const _site = {icon:"web_icon.png", url:"SITE_LINK", friendly:"Website"};
+					const _mail = {icon:"mail_icon.png", url:"mailto:EMAIL_ADDRESS", friendly:"EMAIL_ADDRESS"};
+					const _ig = {icon:"ig_icon.png", url:"https://www.instagram.com/SOCIAL_LINK/", friendly:"@FRIENDLY_TEXT"};
+					const _fb = {icon:"fb_icon.png", url:"FB_LINK", friendly:"Facebook"};
+					const _phone = {icon:"phone_icon.png", url:"tel:XXX-XXX-XXXX", friendly:"PHONE NUMBER"};
+					const _socials = [_person, _site, _mail, _ig, _fb, _phone];
+					makeListing(_imgLoc, _name, _desc, _socials);
+				</script>
+				-->
+				
+				<script>
+					const azappa_imgLoc = 'https://azappastudios.com/_next/image?url=https%3A%2F%2Fcdn.durable.co%2Fblocks%2F25PIqkT1CgtDhy2hny2SzVoZoprG1LXzGYeWPwQImrNADSRSpxgi5LaKhzflPw9R.jpg&w=1920&q=90';
+					const azappa_name = 'Azappa Studios';
+					const azappa_desc = "CT-based tattoo shop that also sells art prints and sticker at gothic-themed vendor events.";
+					const azappa_site = {icon:"web_icon.png", url:"http://azappastudios.com", friendly:"Website"};
+					const azappa_mail = {icon:"mail_icon.png", url:"mailto:azappastudios@gmail.com", friendly:"azappastudios@gmail.com"};
+					const azappa_ig = {icon:"ig_icon.png", url:"https://www.instagram.com/azappa_studios/", friendly:"@Azappa_Studios"};
+					const azappa_fb = {icon:"fb_icon.png", url:"https://www.facebook.com/profile.php?id=100086160440556", friendly:"Facebook"};
+					const azappa_phone = {icon:"phone_icon.png", url:"tel:959-242-3291", friendly:"(959) 242-3291"};
+					const azappa_socials = [azappa_site, azappa_mail, azappa_ig, azappa_fb, azappa_phone];
+					makeListing(azappa_imgLoc, azappa_name, azappa_desc, azappa_socials);
+				</script>
+
+				<script>
+					const gbp_imgLoc = 'https://obsidianbutterfly.com/images/Necronomi-RomCom%20Black%20Cover%20copy%20web.jpg';
+					const gbp_name = 'Gevera Bert Piedmont';
+					const gbp_desc = "Author & editor of weird/horror fiction, soon to be a book coach as well.";
+					const gbp_site = {icon:"web_icon.png", url:"https://obsidianbutterfly.com/", friendly:"Website"};
+					const gbp_ig = {icon:"ig_icon.png", url:"https://www.instagram.com/theonlymissbert/", friendly:"@theonlymissbert"};
+					const gbp_fb = {icon:"fb_icon.png", url:"https://www.facebook.com/geverabertpiedmont", friendly:"Facebook"};
+					const gbp_bsky = {icon:"bsky_icon.png", url:"https://bsky.app/profile/bertpiedmont.bsky.social", friendly:"Bluesky"};
+					const gbp_socials = [gbp_site, gbp_ig, gbp_fb, gbp_bsky];
+					makeListing(gbp_imgLoc, gbp_name, gbp_desc, gbp_socials);
+				</script>
+				
+				<script>
+					const sj_imgLoc = 'https://9c0de74526f7390538be.cdn6.editmysite.com/uploads/b/9c0de74526f7390538beb5207b2dc1cb0869dd49043ef4b8782eabf9b2eaf879/IMG_0098_1734479920.jpeg?width=2400&optimize=medium';
+					const sj_name = 'SJ’s Customs';
+					const sj_desc = "Year-round custom horror and collectibles. Eager to bring your darkest desires to life through paint!";
+					const sj_site = {icon:"web_icon.png", url:"https://sjscustomorder.square.site/", friendly:"Website"};
+					const sj_mail = {icon:"mail_icon.png", url:"mailto:sjscustomorder@gmail.com", friendly:"sjscustomorder@gmail.com"};
+					const sj_ig = {icon:"ig_icon.png", url:"https://www.instagram.com/sjscustomorder/", friendly:"@sjscustomorder"};
+					const sj_fb = {icon:"fb_icon.png", url:"https://www.facebook.com/share/1BfGwg5uKq/?mibextid=wwXIfr", friendly:"Facebook"};
+					const sj_socials = [sj_site, _sjmail, sj_ig, sj_fb];
+					makeListing(sj_imgLoc, sj_name, sj_desc, sj_socials);
+				</script>
+				
+				<script>
+					const ulp_imgLoc = 'https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/447482203_10229717426294100_3622998158261048540_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=xC_E83QeUCYQ7kNvgFqjccm&_nc_oc=Adj_2er5o8Czhc-mh2sizYbdPhehE_QPR1xvSSzhZTU2ZT--H5Vt237zeyzZeDBj4Zo&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=5UK2n4UFkZ3y5ZOTRrncaA&oh=00_AYGprr63JxUpC-YULMpCakP3nAqVhBka4_x2x7JxABAXKw&oe=67DD5762';
+					const ulp_name = 'Upstream Lion Publishing';
+					const ulp_desc = "Original Art, Horror Coloring books, Apparel, Posters, Journals, Kids books, Commissions Available.";
+					const ulp_site = {icon:"web_icon.png", url:"https://www.upstreamlionpublishing.com/", friendly:"Website"};
+					const ulp_mail = {icon:"mail_icon.png", url:"mailto:UPSTREAMLION@gmail.com", friendly:"UPSTREAMLION@gmail.com"};
+					const ulp_ig = {icon:"ig_icon.png", url:"https://www.instagram.com/upstream_lion_publishing/", friendly:"@upstream_lion_publishing"};
+					const ulp_fb = {icon:"fb_icon.png", url:"https://www.facebook.com/profile.php?id=61560806515380", friendly:"Facebook"};
+					const ulp_socials = [ulp_site, ulp_mail, ulp_ig, ulp_fb];
+					makeListing(ulp_imgLoc, ulp_name, ulp_desc, ulp_socials);
+				</script>
+				
 				<br><br><br>
+				<!--
 				<h1>Gallery</h1>
 				<script type="text/javascript" src="https://nightlinks-nyc.com/js/makeGallery.js"></script>
 				<script>makeGallery(photos_wanted);</script>
+				-->
 			</div> <!-- End class="mainBody" -->
 		</div> <!-- End class="aboveFooter" -->
 		<script type="text/javascript" src="https://nightlinks-nyc.com/js/makeFooter.js"></script>
