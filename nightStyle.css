@@ -454,7 +454,7 @@ th {
 }
 
 .descriptionCell {
-	width: 50%;
+	width: 45%;
 	border: solid transparent;
 	vertical-align: top;
 }
@@ -475,7 +475,7 @@ th {
 
 .socialsCell {
 	vertical-align: top;
-	width: 30%;
+	width: 35%;
 	padding: 10px 0;
 	border: solid transparent;
 }
