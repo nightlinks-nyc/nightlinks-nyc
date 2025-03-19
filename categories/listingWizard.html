@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.genLabel {
+  display:inline-block;
+  width: 100px;
+  margin: 10px 20px 10px 0;
+}
+.genInput {
+  width: calc(100% - 200px);
+  margin: 10px 20px 10px 0;
+}
+.scriptBox {
+  padding:10px;
+  border: solid 1px gray;
+ }
+</style>
+</head>
+
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="/action_page.php">
+  <label class="genLabel" for="name">Name: </label>
+  <input class="genInput" id="name"><br> 
+  <label class="genLabel" for="prefix">Code prefix: </label>
+  <input class="genInput" id="prefix"><br>  
+  <label class="genLabel" for="desc">Description: </label>
+  <textarea rows="4" cols="80" id="desc"></textarea>  <br>  
+  <label class="genLabel" for="imgPath">Image path: </label>
+  <input class="genInput" id="imgPath">  <br>  
+  <label class="genLabel" for="web">Website: </label>
+  <input class="genInput" id="web">  <br>  
+  <label class="genLabel" for="email">Email: </label>
+  <input class="genInput" id="email">  <br>  
+  <label class="genLabel" for="ig">Instagram: </label>
+  <input class="genInput" id="ig">  <br>
+  <label class="genLabel" for="fb">Facebook: </label>
+  <input class="genInput" id="fb">  <br>
+  <label class="genLabel" for="phone">Phone: </label>
+  <input class="genInput" id="phone">  <br>
+  <br> <br> <hr> <br>
+  <label class="genLabel" for="addy">Address: </label>
+  <input class="genInput" id="addy">   
+  <label class="genLabel" for="amazon">Amazon: </label>
+  <input class="genInput" id="amazon"> <br>
+  <label class="genLabel" for="bc">Bandcamp: </label>
+  <input class="genInput" id="bc">  <br>
+  <label class="genLabel" for="bsky">Bluesky: </label>
+  <input class="genInput" id="bsky">  <br>
+  <label class="genLabel" for="etsy">Etsy: </label>
+  <input class="genInput" id="etsy">  <br>
+  <label class="genLabel" for="gr">GoodReads: </label>
+  <input class="genInput" id="gr">  <br>
+  <label class="genLabel" for="lt">Linktree: </label>
+  <input class="genInput" id="lt">  <br>
+  <label class="genLabel" for="patreon">Patreon: </label>
+  <input class="genInput" id="patreon">  <br>
+  <label class="genLabel" for="person">Person: </label>
+  <input class="genInput" id="person">  <br>  
+  <label class="genLabel" for="spotify">Spotify: </label>
+  <input class="genInput" id="spotify">  <br>
+  <label class="genLabel" for="vimeo">Vimeo: </label>
+  <input class="genInput" id="vimeo">  <br>
+  <label class="genLabel" for="yt">YouTube: </label>
+  <input class="genInput" id="yt">  <br><br>
+  
+  <input type="button" onclick="genListing()" value="Generate listing">
+  
+</form> 
+
+<p>Script:</p>
+<div class="scriptBox">
+<pre><code id="jsScript">Enter values to generate script!</code></pre>
+</div>
+<br>
+<input type="button" onclick="copyScript()" value="Copy script">
+<script>
+  const socialBools = [web, email, ig, fb, phone, web, phone, addy, amazon, bc, bsky, etsy, gr, lt, patreon, person, spotify, vimeo, yt];
+  
+  
+  function genListing() {
+    var pf = document.getElementById("prefix").value;
+    var name = document.getElementById("name").value;
+    var desc = document.getElementById("desc").value;
+    var imgPath = document.getElementById("imgPath").value;
+    let myScript =  "\t\t\t\t" + "\&lt;script\&gt;" + "\n" +
+                    "\t\t\t\t\t" + "const " + pf + "_name = '" + name + "';\n" +
+                    "\t\t\t\t\t" + "const " + pf + "_desc = '" + desc + "';\n" +
+                    "\t\t\t\t\t" + "const " + pf + "_imgLoc = '" + imgPath + "';\n";
+    
+    const socials = ["web", "email", "ig", "fb", "phone", "addy", "amazon", "bc", "bsky", "etsy", "gr", "lt", "patreon", "person", "spotify", "vimeo", "yt"];
+    let socialsArr = "\t\t\t\t\t" + "const " + pf + "_socials = [";
+    for (social of socials) {
+      var socialValue = document.getElementById(social).value;
+      if (socialValue != "") {
+        myScript += "\t\t\t\t\t" + "const " + pf + "_" + social + " = '" + socialValue + "';\n";
+        socialsArr += pf + "_" + social + ", ";
+      }
+    }
+    socialsArr += "];";
+    myScript += socialsArr + "\n";
+    myScript += "\t\t\t\t\t" + "makeListing(" + pf + "_imgLoc, " + pf + "_name, " + pf + "_desc, " + pf + "_socials);" + "\n" + "\t\t\t\t" + "&lt;/script&gt;" + "\n";
+    document.getElementById("jsScript").innerHTML = myScript;
+  }
+  
+  function copyScript() {
+	copyText = document.getElementById("jsScript").outerHTML;
+	function listener(e) {
+		e.clipboardData.setData("text/html", copyText);
+		e.clipboardData.setData("text/plain", copyText);
+		e.preventDefault();
+	}
+	document.addEventListener("copy", listener);
+	document.execCommand("copy");
+	document.removeEventListener("copy", listener);
+}
+
+</script>
+
+</body>
+</html>
