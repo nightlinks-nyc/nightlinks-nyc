@@ -95,14 +95,14 @@
 					"\t\t\t\t\t" + "const " + pf + "_imgLoc = '" + imgPath + "';\n";
 					if (email != "") {
 						myScript +=  "\t\t\t\t\t" + "const " + pf + '_mail = {icon:"mail_icon.png", url:"mailto:' + email + '", friendly:"' + email + '"};\n';
-						socialsArr += pf + '_email, ';
+						socialsArr += pf + '_mail, ';
 					}
 					if (ig != "") {
-						"\t\t\t\t\t" + "const " + pf + '_ig = {icon:"ig_icon.png", url:"https://www.instagram.com/' + ig + '/", friendly:"@' + ig + '"};\n';
+						myScript +=  "\t\t\t\t\t" + "const " + pf + '_ig = {icon:"ig_icon.png", url:"https://www.instagram.com/' + ig + '/", friendly:"@' + ig + '"};\n';
 						socialsArr += pf + '_ig, ';
 					}
 					if (phone != "") {
-						"\t\t\t\t\t" + "const " + pf + '_phone = {icon:"phone_icon.png", url:"tel:' + phone.slice(0,3) + '-' + phone.slice(3,6) + '-' + phone.slice(7,10) + '", friendly:"(' + phone.slice(0,3) + ') ' + phone.slice(3,6) + '-' + phone.slice(7,10) + '"};\n';
+						myScript +=  "\t\t\t\t\t" + "const " + pf + '_phone = {icon:"phone_icon.png", url:"tel:' + phone.slice(0,3) + '-' + phone.slice(3,6) + '-' + phone.slice(6,10) + '", friendly:"(' + phone.slice(0,3) + ') ' + phone.slice(3,6) + '-' + phone.slice(6,10) + '"};\n';
 						socialsArr += pf + '_phone, ';
 					}
 				const socials = ["web", "fb", "addy", "amazon", "bc", "bsky", "etsy", "gr", "lt", "patreon", "person", "spotify", "vimeo", "yt"];
