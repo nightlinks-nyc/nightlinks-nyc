@@ -73,13 +73,24 @@
 		</form> 
 		<p>Script:</p>
 		<div class="scriptBox">
-			<pre>
-				<code id="jsScript">Enter values to generate script!</code>
-			</pre>
+			<pre><code id="jsScript">Enter values to generate script!</code></pre>
 		</div>
-		<br>
-		<input type="button" onclick="copyScript()" value="Copy script">
-		<script>
+		<br><br><br><br><br><br>
+		<script> 
+			const amazon  = {id:"amazon",  icon:"amazon_icon.png",   friendly:"Amazon"};
+			const bc      = {id:"bc",      icon:"bandcamp_icon.png", friendly:"Bandcamp"};
+			const bsky    = {id:"bsky",    icon:"bsky_icon.png",     friendly:"Bluesky"};
+			const etsy    = {id:"etsy",    icon:"etsy_icon.png",     friendly:"Etsy"};
+			const fb      = {id:"fb",      icon:"fb_icon.png",       friendly:"Facebook"};
+			const gr      = {id:"gr",      icon:"gr_icon.png",       friendly:"Goodreads"};
+			const lt      = {id:"lt",      icon:"linktree.png",      friendly:"Linktree"};
+			const patreon = {id:"patreon", icon:"patreon_icon.png",  friendly:"Patreon"};
+			const person  = {id:"person",  icon:"person_icon.png",   friendly:"Artist Profile"};
+			const spotify = {id:"spotify", icon:"spotify_icon.png",  friendly:"Spotify"};
+			const vimeo   = {id:"vimeo",   icon:"vimeo_icon.png",    friendly:"Vimeo"};
+			const web     = {id:"web",     icon:"web_icon.png",      friendly:"Visit the website"};
+			const yt      = {id:"yt",      icon:"yt_icon.png",       friendly:"Facebook"}; 
+         
 			function genListing() {
 				var pf = document.getElementById("prefix").value;
 				var name = document.getElementById("name").value;
@@ -88,36 +99,49 @@
 				var email = document.getElementById("email").value;
 				var ig = document.getElementById("ig").value;
 				var phone = document.getElementById("phone").value;
+				var address = document.getElementById("addy").value;
 				let socialsArr = "\t\t\t\t\t" + "const " + pf + "_socials = [";
 				let myScript =  "\t\t\t\t" + "\&lt;script\&gt;" + "\n" +
 					"\t\t\t\t\t" + "const " + pf + "_name = '" + name + "';\n" +
 					"\t\t\t\t\t" + "const " + pf + "_desc = '" + desc + "';\n" +
 					"\t\t\t\t\t" + "const " + pf + "_imgLoc = '" + imgPath + "';\n";
-					if (email != "") {
-						myScript +=  "\t\t\t\t\t" + "const " + pf + '_mail = {icon:"mail_icon.png", url:"mailto:' + email + '", friendly:"' + email + '"};\n';
-						socialsArr += pf + '_mail, ';
-					}
-					if (ig != "") {
-						myScript +=  "\t\t\t\t\t" + "const " + pf + '_ig = {icon:"ig_icon.png", url:"https://www.instagram.com/' + ig + '/", friendly:"@' + ig + '"};\n';
-						socialsArr += pf + '_ig, ';
-					}
-					if (phone != "") {
-						myScript +=  "\t\t\t\t\t" + "const " + pf + '_phone = {icon:"phone_icon.png", url:"tel:' + phone.slice(0,3) + '-' + phone.slice(3,6) + '-' + phone.slice(6,10) + '", friendly:"(' + phone.slice(0,3) + ') ' + phone.slice(3,6) + '-' + phone.slice(6,10) + '"};\n';
-						socialsArr += pf + '_phone, ';
-					}
-				const socials = ["web", "fb", "addy", "amazon", "bc", "bsky", "etsy", "gr", "lt", "patreon", "person", "spotify", "vimeo", "yt"];
+                    
+				if (ig != "") {
+					myScript +=  "\t\t\t\t\t" + "const " + pf + '_ig = {icon:"ig_icon.png", url:"https://www.instagram.com/' + ig + '/", friendly:"@' + ig + '"};\n';
+					socialsArr += pf + '_ig, ';
+				}
+                
+				if (email != "") {
+					myScript +=  "\t\t\t\t\t" + "const " + pf + '_mail = {icon:"mail_icon.png", url:"mailto:' + email + '", friendly:"' + email + '"};\n';
+					socialsArr += pf + '_mail, ';
+				}
+                
+				if (phone != "") {
+					myScript +=  "\t\t\t\t\t" + "const " + pf + '_phone = {icon:"phone_icon.png", url:"tel:' + phone.slice(0,3) + '-' + phone.slice(3,6) + '-' + phone.slice(6,10) + '", friendly:"(' + phone.slice(0,3) + ') ' + phone.slice(3,6) + '-' + phone.slice(6,10) + '"};\n';
+					socialsArr += pf + '_phone, ';
+				}
+                
+				const socials = [web, fb, amazon, bc, bsky, etsy, gr, lt, patreon, person, spotify, vimeo, yt];
 				for (social of socials) {
-					var socialValue = document.getElementById(social).value;
+					var socialValue = document.getElementById(social.id).value;
 					if (socialValue != "") {
-						myScript += "\t\t\t\t\t" + "const " + pf + "_" + social + " = '" + socialValue + "';\n";
-						socialsArr += pf + "_" + social + ", ";
+						myScript += "\t\t\t\t\t" + "const " + pf + "_" + social.id + ' = {icon:"' + social.icon + '", url:"' + socialValue + '", friendly:"' + social.friendly + '"};\n';
+						socialsArr += pf + "_" + social.id + ", ";
 					}
 				}
+                
+				if (address != "") {
+					myScript +=  "\t\t\t\t\t" + "const " + pf + '_address = {icon:"loc_icon.png", url:"https://www.google.com/search?q=:' + address + '", friendly:"' + address + '"};\n';
+					socialsArr += pf + '_address, ';
+				}
+                
 				socialsArr += "];";
 				myScript += socialsArr + "\n";
-				myScript += "\t\t\t\t\t" + "makeListing(" + pf + "_imgLoc, " + pf + "_name, " + pf + "_desc, " + pf + "_socials);" + "\n" + "\t\t\t\t" + "&lt;/script&gt;" + "\n";
-				document.getElementById("jsScript").innerHTML = myScript;
+				myScript += "\t\t\t\t\t" + "makeListing(" + pf + "_imgLoc, " + pf + "_name, " + pf + "_desc, " + pf + "_socials);" + "\n" + "\t\t\t\t" + "&lt;/script&gt;" + "\n";                
+				document.getElementById("jsScript").innerHTML = myScript;                
+				document.getElementById("myScript").innerHTML = myScript;
 			}
+            
 			function copyScript() {
 				copyText = document.getElementById("jsScript").outerHTML;
 				function listener(e) {
