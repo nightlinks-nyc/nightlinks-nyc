@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<script type="text/javascript" src="https://nightlinks-nyc.com/js/makeHead.js"></script>
+	<script>makeHead("Health, Care, & Fitness");</script>
+	<body>
+		<div class="aboveFooter">
+			<script type="text/javascript" src="https://nightlinks-nyc.com/js/makeHeader.js"></script>
+			<script type="text/javascript" src="https://nightlinks-nyc.com/js/makeSidenav.js"></script>
+			<script>makeSideNav("Health, Care, & Fitness");</script>
+			<div class="mainBody" style="padding-bottom:500px;">
+				<h1>Health, Care, & Fitness</h1>
+				<p class="subheading">
+					Health, Care, & Fitness.
+				</p>
+				<p>
+					Listings wanted!  
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLScq-V6I9PgNDXIREt2lnhRTPQwK71LIY1XX82UnHBr-qxcyJQ/viewform?usp=header">Submit yours here.</a>
+				</p>
+				<script type="text/javascript" src="https://nightlinks-nyc.com/js/makeWarning.js"></script>
+				<script type="text/javascript" src="https://nightlinks-nyc.com/js/makeListing.js"></script>
+				<h2>Fitness</h2>
+				
+				<script>
+					const mhg_name = 'Madhouse Gym';
+					const mhg_desc = 'Premium strength equipment: Arsenal Strength, EliteFTS, and Rogue Fitness.\n' +
+						'Fitness Apparel by Upstream Lion.\n' + 
+						'Members get 24-hour access to the gym 365 a year via app.\n' +
+						'First Responder / Military Discounts available.';
+					const mhg_imgLoc = 'https://madhousestrengthtraining.com/wp-content/uploads/2024/06/445A2375-scaled.jpg';
+					const mhg_ig = {icon:"ig_icon.png", url:"https://www.instagram.com/madhousestrength/", friendly:"@madhousestrength"};
+					const mhg_mail = {icon:"mail_icon.png", url:"mailto:info@madhouse-gym.com", friendly:"info@madhouse-gym.com"};
+					const mhg_phone = {icon:"phone_icon.png", url:"tel:475-209-9182", friendly:"(475) 209-9182"};
+					const mhg_web = {icon:"web_icon.png", url:"https://madhousestrengthtraining.com/", friendly:"Visit the website"};
+					const mhg_fb = {icon:"fb_icon.png", url:"https://www.facebook.com/MadhouseStrengthTraining", friendly:"Facebook"};
+					const mhg_address = {icon:"loc_icon.png", url:"https://www.google.com/search?q=:500 Boston Post Rd #10 Orange CT 06477", friendly:"500 Boston Post Rd #10 Orange CT 06477"};
+					const mhg_socials = [mhg_ig, mhg_mail, mhg_phone, mhg_web, mhg_fb, mhg_address, ];
+					makeListing(mhg_imgLoc, mhg_name, mhg_desc, mhg_socials);
+				</script>
+				
+				<br><br><br>
+				<!--
+				<h1>Gallery</h1>
+				<script type="text/javascript" src="https://nightlinks-nyc.com/js/makeGallery.js"></script>
+				<script>makeGallery(photos_wanted);</script>
+				-->
+			</div> <!-- End class="mainBody" -->
+		</div> <!-- End class="aboveFooter" -->
+		<script type="text/javascript" src="https://nightlinks-nyc.com/js/makeFooter.js"></script>
+	</body>
+</html>
